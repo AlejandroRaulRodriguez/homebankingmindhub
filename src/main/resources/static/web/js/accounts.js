@@ -132,6 +132,7 @@ Vue.createApp({
         
         if (this.filteredTransactions.length > 0){
           Swal.fire({
+            position: 'top-end',
             icon: 'success',
             title: 'Filter applied successfully',
             showConfirmButton: false,
