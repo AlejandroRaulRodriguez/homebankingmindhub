@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: url(../img/forest.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+/* INDEX */
+.contenedorIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.logoIndexContenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+  
+.logoIndex {
+    width: 300px;
+}
+
+.contenedorForm{
+    width: 400px;
+    max-width: 80%;
+    background: black;
+    color: silver;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+  
+.contenedorForm h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+  
+.contenedorForm form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+  
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 2px solid silver;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+input[type="button"]{
+    width: 100%;
+    height: 50px;
+    border: 2px solid silver;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="button"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+  
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+  
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+  
+.signup_link a:hover{
+    text-decoration: underline;
+}
+  
+  
+/* HOME */
+
+.btn-primary {
+    background-color: #2691d9;
+}
+
+.navHeader {
+    border-bottom: solid 1px whitesmoke;
+    margin-bottom: 1rem;
+}
+
+.navHeader a{
+    color: whitesmoke;
+   
+}
+
+.navHeader a:hover{
+    color: #2691d9; 
+}
+
+h2, h3, h4, h5 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+.contenidoHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.tituloLogo {
+    display: flex;
+    color: whitesmoke;
+
+}
+
+.logoCompletoInicio {
+    width: 180px;
+}
+
+.bienvenida {
+    color: whitesmoke;
+    text-align: start;
+}
+
+nav{
+    border-bottom: 2px white solid;
+}
+
+.logoNav {
+    width: 35px;
+}
+
+.contenedorHome {  
+    display: grid;
+    gap: 15px;
+}
+
+.contenedorAccounts{
+    width: 95%;
+    margin: 20px auto;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+}
+
+.contenedorCartasCuentas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.contenedorTablas {
+    display: flex;   
+    flex-direction: column; 
+    max-width: 95%;
+    margin-bottom: 20px;
+}
+
+.contenedorBotonesCuentas {
+    display: flex;
+    gap: 10px;
+
+}
+
+.boton{
+    width: auto;
+    height: 50px;
+    border: 2px solid silver;
+    background: #2691d9;
+    border-radius: 25px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+
+.boton:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.buttonAccount{
+    width: 150px;
+    height: 50px;
+    border: 2px solid silver;
+    background: #2691d9;
+    border-radius: 25px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+.buttonAccount:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.contenedorCartaCuenta{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+
+}
+
+
+label{
+    color: white;
+}
+
+.ver{
+    color: white;
+}
+
+.ver:hover{
+    color: #2691d9;
+    
+}
+
+.debito{
+    color: red;
+}
+
+.credito{
+    color: green;
+}
+
+/* TRANSFERENCIAS */
+.contenedorTransferencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 40px;
+    margin-bottom: 20px; 
+}
+
+
+.contenedorBotonesTransferencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputTransferencia{
+    display: none;
+}
+
+
+.labelTransferencia{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid #2691d9;
+    border-radius: 5px;
+    padding: 3px 15px;
+    display: flex;
+    align-items: center;
+     
+}
+
+.labelTransferencia:before{
+    content: " ";
+    height: 25px;
+    width: 25px;
+    border: 3px solid #2691d9;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.inputTransferencia:checked + .labelTransferencia {
+    background-color: #2691d9;
+    color: white;
+}
+    
+
+.inputTransferencia:checked + .labelTransferencia:before {
+    height: 25px;
+    width: 25px;
+    border: 5px solid white;
+}
+
+
+.contenedorFormTransferencias{
+    width: 600px;
+    max-width: 90%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contenedorFormTransferencias form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.containerDates {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.containerDates .boton{
+    width: 100px;
+    align-self: center;
+}
+
+
+
+/* PRESTAMOS */
+
+.contenedorPrestamos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 40px;
+}
+
+.contenedorFormPrestamos{
+    width: 600px;
+    max-width: 90%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.contenedorFormPrestamos form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.contenedorFormPrestamos form p {
+    color: white;
+}
+/* TARJETAS */
+
+.contenedorTarjetas {
+    width: 80%;
+    margin: 20px auto;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+}
+
+.contenedorTarjetasCredito, .contenedorTarjetasDebito {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+
+.h3Tarjetas{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.divBoton{
+    margin-top: 50px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.botonAgregarTarjetas {
+    width: auto;
+    height: auto;
+    border: 2px solid silver;
+    padding: 5px;
+    background: #2691d9;
+    text-decoration: none;
+    border-radius: 25px;
+    color: #e9f4fb;
+    font-weight: 700;
+    font-size: large;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.botonAgregarTarjetas:hover{
+    border-color: #2691d9;
+    transition: .5s;
+    color: white;
+}
+
+.contenedorCrearTarjetas {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    align-items: center;
+}
+
+.contenedorFormCrearTarjetas{
+    width: 600px;
+    max-width: 90%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 30px;  
+}
+.contenedorCrearTarjetas form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    font-size: x-large;  
+}
+
+.contenedorBorrarTarjetas form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    font-size: x-large;  
+}
+
+.h4CrearTarjetas {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contenedorTarjetaPlaceholder {
+    width: 600px;
+    max-width: 90%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 30px;    
+}
+
+.radioBotonCrearTarjetas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.contenedorBorrarTarjetas {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    align-items: center;
+}
+
+.contenedorFormBorrarTarjetas{
+    width: 600px;
+    max-width: 90%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 30px;  
+}
+
+/* MAIN CREDIT CARD CONTAINER */
+
+.credit-card {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    width: 95%;
+    max-width: 400px;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 4px 0 #cfd7df;
+    min-height: 120px;
+    height: 170px;
+    padding: 13px;
+    background: #1a1b1c;
+    color: #efefef;
+}
+
+.credit-card.selectable:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+/*  NUMBER FORMATTING */
+
+.credit-card-last4 {
+    font-family: "PT Mono", Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.credit-card-last4:before {
+    content: "**** **** **** ";
+    color: #4f4d4d;
+    font-size: 40px;
+}
+
+.credit-card-number {
+    font-family: "PT Mono", Helvetica, sans-serif;
+    font-size: 35px;    
+}
+
+.credit-card-number:before {
+    color: #4f4d4d;
+    font-size: 35px;
+}
+
+.credit-card-expiry {
+    font-family: "PT Mono", Helvetica, sans-serif;
+    font-size: 25px;
+    position: absolute;
+    bottom: 2px;
+    left: 15px;
+}
+
+.credit-card-expiry-expired {
+    font-family: "PT Mono", Helvetica, sans-serif;
+    font-size: 25px;
+    color: red;
+    position: absolute;
+    bottom: 2px;
+    left: 15px;
+}
+
+.credit-card-expiry-expired p{
+    font-family: "PT Mono", Helvetica, sans-serif;
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    bottom: 12px;
+    left: 2px;
+}
+
+.cardNameClient {
+    font-family: "PT Mono", Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+/* BRAND CUSTOMIZATION */
+
+.credit-card.visa.silver {
+    background: #757575;
+    color: #eaeef2;
+}
+
+.credit-card.visa.gold {
+    background: #C29B0C;
+    color: #eaeef2;
+}
+
+.credit-card.visa.titanium {
+    background: #252323;
+    color: #eaeef2;
+}
+
+.credit-card.visa .credit-card-last4:before {
+    color: rgb(214, 212, 212);
+}
+
+
+/*   LOGOS  */
+
+.credit-card::after {
+    content: " ";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.credit-card.visa::after {
+    height: 16px;
+    width: 50px;
+    background-image: url('data:image/png;base64,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');
+}
+
+@media screen and (max-width: 900px){
+    .contenedorAccounts .contenedorCartasCuentas, .contenedorAccounts .contenedorTablas {
+        grid-column: 1 / -1;
+
+    }
+
+    .contenedorTarjetas {
+        width: 95%;
+    }
+
+    .contenedorTarjetas .contenedorTarjetasCredito, .contenedorTarjetas .contenedorTarjetasDebito{
+        grid-column: 1 / -1;
+    }
+
+    .contenedorBotonesCuentas{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 705px){
+    .contenedorFormCrearTarjetas, .contenedorTarjetaPlaceholder, .contenedorFormBorrarTarjetas {
+        min-width: 100%;
+    }  
+    .contenedorCrearTarjetas, .contenedorBorrarTarjetas {
+        width: 95%;
+    }
+
+    .credit-card-last4{
+        font-size: 30px;
+    }
+
+    .credit-card-last4:before{
+        font-size: 30px;
+    }
+
+    .credit-card-number{
+        font-size: 30px;
+    }
+
+    .credit-card-number:before{
+        font-size: 30px;
+    }
+
+    .contenedorTablas{
+        max-width: 99%;
+        font-size: small;    
+    }
+}
+
+@media screen and (max-width: 605px){
+    .radioBotonCrearTarjetas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    } 
+}
+
+@media screen and (max-width: 525px){
+    .contenedorFormTransferencias form{
+        font-size: medium
+    }
+
+    .contenedorBotonesTransferencia{
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+    }
+
+    .contenedorBotonesTransferencia label{
+        font-size:medium;
+    }
+
+    .h2Transferencias{
+        margin-right: 3%;
+        margin-left: 3%;
+        font-size: 22px;
+    }
+
+    .contenedorFormPrestamos form{
+        font-size: medium
+    }
+
+    .h2Prestamos{
+        margin-right: 5%;
+        margin-left: 5%;
+        font-size:x-large
+    }
+}
+
+@media screen and (max-width: 405px){   
+    .credit-card-number{
+        font-size: 25px;
+    }
+
+    .credit-card-number:before{
+        font-size: 25px;
+    }     
+};
+    
+
+
+
+
