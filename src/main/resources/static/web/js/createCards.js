@@ -9,7 +9,6 @@ Vue.createApp({
 
   created(){
     
-    
     window.onload = function(){
       let loader = document.querySelector("#loader").classList.toggle("loader2")  
       
