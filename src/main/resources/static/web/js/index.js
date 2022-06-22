@@ -19,7 +19,7 @@ Vue.createApp({
       logIn(){
         axios.post('/api/login' , `email=${this.email}&password=${this.password}` , {headers:{'content-type':'application/x-www-form-urlencoded'}})
         .then(() => axios.patch("/api/clients/current/cards"))
-        .then(() => window.location.href = "http://localhost:8080/web/accounts.html")
+        .then(() => window.location.href = "/web/accounts.html")
         .catch(error => {
           console.log(error.response.data.error)
           Swal.fire({

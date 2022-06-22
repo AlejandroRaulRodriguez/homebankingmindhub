@@ -57,7 +57,7 @@ Vue.createApp({
 
     logOut(){
       axios.post('/api/logout')
-      .then(() => window.location.href = "http://localhost:8080/web/index.html")
+      .then(() => window.location.href = "/web/index.html")
     },
 
   },

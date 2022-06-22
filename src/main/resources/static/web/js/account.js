@@ -53,7 +53,7 @@ Vue.createApp({
                   showConfirmButton: false,
                   timer: 1500
               })
-              .then(() => window.location.href = "http://localhost:8080/web/accounts.html")
+              .then(() => window.location.href = "/web/accounts.html")
               )
               .catch(error => {
                   console.log(error.response.data)
@@ -70,7 +70,7 @@ Vue.createApp({
 
       logOut(){
         axios.post('/api/logout')
-          .then(() => window.location.href = "http://localhost:8080/web/index.html")
+          .then(() => window.location.href = "/web/index.html")
       }
     }
   }).mount('#app')
