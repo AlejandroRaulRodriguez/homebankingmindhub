@@ -16,7 +16,7 @@ Vue.createApp({
     },
 
     created(){
-        axios.get('http://localhost:8080/api/clients/current')
+        axios.get('/api/clients/current')
         .then(data =>{
           this.clientAccounts = data.data.account.sort(function(a,b){return a.id - b.id})
           this.clientAccounts = this.clientAccounts.filter(account => account.disable == false)

@@ -12,7 +12,7 @@ Vue.createApp({
     },
 
     created(){
-        axios.get('http://localhost:8080/api/clients/current')
+        axios.get('/api/clients/current')
             .then(data =>{
                 this.cardsClient = data.data.cards.sort(function(a,b){return a.id - b.id})
 
