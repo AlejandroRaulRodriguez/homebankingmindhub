@@ -21,11 +21,11 @@ class WebAuthorization extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST,"/api/clients").permitAll()
                 .antMatchers("/web/index.html","/web/js/index.js","/web/css/style.css","/web/img/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/api/clients/current","/api/loans").hasAnyAuthority("CLIENT")
-                .antMatchers(HttpMethod.POST,"/api/clients/current/accounts","/api/clients/current/cards","/api/loans","/api/clients/current/transactions").hasAnyAuthority("CLIENT")
-                .antMatchers(HttpMethod.PATCH,"/api/clients/current/accounts/**","/api/clients/current/cards/**").hasAnyAuthority("CLIENT")
+                .antMatchers(HttpMethod.GET,"/api/clients/current","/api/loans").hasAnyAuthority("CLIENT","ADMIN")
+                .antMatchers(HttpMethod.POST,"/api/clients/current/accounts","/api/clients/current/cards","/api/loans","/api/clients/current/transactions").hasAnyAuthority("CLIENT","ADMIN")
+                .antMatchers(HttpMethod.PATCH,"/api/clients/current/accounts/**","/api/clients/current/cards/**").hasAnyAuthority("CLIENT","ADMIN")
                 .antMatchers("/web/**").hasAnyAuthority("CLIENT")
-                .antMatchers("/rest/**","/h2-console/**","/api/**","/manager.html","/manager.js").hasAnyAuthority("ADMIN")
+                .antMatchers("/rest/**","/h2-console/**","/api/**","/manager.html","/manager.js","/web/**").hasAnyAuthority("ADMIN")
                 ;
 
 

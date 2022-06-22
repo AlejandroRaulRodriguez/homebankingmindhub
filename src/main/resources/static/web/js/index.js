@@ -47,7 +47,7 @@ Vue.createApp({
           this.errorMessage = error.response.data
           Swal.fire({
             icon: 'error',
-            title: this.errorMessage + '!',
+            title: this.errorMessage,
             confirmButtonColor: '#2691d9'
           })
         })
