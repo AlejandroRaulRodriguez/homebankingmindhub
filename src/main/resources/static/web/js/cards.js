@@ -15,14 +15,14 @@ Vue.createApp({
 
 
   created(){
+    window.onload = function(){
+      let loader = document.querySelector("#loader").classList.toggle("loader2")  
+      
+      loader.style.visibility = "hidden"
+      loader.style.opacity = "0"
+    }
     axios.get('/api/clients/current')
     .then(data =>{
-      window.onload = function(){
-        let loader = document.querySelector("#loader").classList.toggle("loader2")  
-        
-        loader.style.visibility = "hidden"
-        loader.style.opacity = "0"
-      }
       this.clientCards = data.data.cards
       this.clientCards = this.clientCards.filter(card => card.disable == false)
       this.clientCards.forEach(card => card.cardholder = card.cardholder.toUpperCase())
