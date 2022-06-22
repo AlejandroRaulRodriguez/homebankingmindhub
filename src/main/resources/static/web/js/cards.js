@@ -19,6 +19,7 @@ Vue.createApp({
     .then(data =>{
 
       this.clientCards = data.data.cards
+      document.querySelector("#loader").classList.toggle("loader2")    
       this.clientCards = this.clientCards.filter(card => card.disable == false)
       this.clientCards.forEach(card => card.cardholder = card.cardholder.toUpperCase())
       this.clientCards.forEach(card => card.expiry = "")

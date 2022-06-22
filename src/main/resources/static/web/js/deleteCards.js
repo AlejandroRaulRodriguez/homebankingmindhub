@@ -15,7 +15,7 @@ Vue.createApp({
         axios.get('/api/clients/current')
             .then(data =>{
                 this.cardsClient = data.data.cards.sort(function(a,b){return a.id - b.id})
-
+                document.querySelector("#loader").classList.toggle("loader2")    
                 this.cardsClient = this.cardsClient.filter(card => card.disable == false)
 
                 this.cardsClient.forEach(card => card.cardholder = card.cardholder.toUpperCase())
