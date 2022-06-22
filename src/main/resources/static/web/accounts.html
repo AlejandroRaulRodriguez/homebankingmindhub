@@ -105,7 +105,7 @@
                                 <p class="card-text">Balance: ${{(account.balance).toLocaleString("de-DE")}}</p>
                                 <p class="card-text">Date of creation: {{new Date(account.creationDate).toLocaleString()}}</p>
                                 <p class="card-text">Type: {{account.type}}</p>
-                                <a class="ver" :href="'http://localhost:8080/web/account.html?id=' + account.id"><p>Account details</p></a>
+                                <a class="ver" :href="'/web/account.html?id=' + account.id"><p>Account details</p></a>
                             </div>
                         </div>
                     </div>
