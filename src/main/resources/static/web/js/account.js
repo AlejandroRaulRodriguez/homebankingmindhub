@@ -17,14 +17,14 @@ Vue.createApp({
     created(){
         axios.get('/api/clients/current')
             .then(data => {
-              
-              this.clientAccounts = data.data.account.sort(function(a,b){return a.id - b.id})
               window.onload = function(){
                 let loader = document.querySelector("#loader").classList.toggle("loader2")  
                 
                 loader.style.visibility = "hidden"
                 loader.style.opacity = "0"
               }
+              this.clientAccounts = data.data.account.sort(function(a,b){return a.id - b.id})
+
               this.clientAccounts = this.clientAccounts.filter(account => account.disable == false)
 
               this.selectedAccount =  this.clientAccounts.filter(cuenta => cuenta.id == id )
