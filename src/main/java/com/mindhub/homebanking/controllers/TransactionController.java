@@ -24,8 +24,6 @@ import java.util.Set;
 @RequestMapping("/api")
 public class TransactionController {
 
-    public TransactionController(){}
-
     @Autowired
     private TransactionService transactionService;
 

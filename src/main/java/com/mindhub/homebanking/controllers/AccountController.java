@@ -26,7 +26,6 @@ import static com.mindhub.homebanking.utils.Utils.getRandomNumber;
 @RequestMapping("/api")
 public class AccountController {
 
-    public AccountController() {}
 
     @Autowired
     private AccountService accountService;
